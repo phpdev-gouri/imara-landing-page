@@ -1,0 +1,729 @@
+/* utility classes start */
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    overflow-x: hidden !important;
+}
+
+body {
+    font-family: "Soleil" !important;
+}
+
+.bg-theme-light {
+    background-color: #fcfcfc !important;
+}
+
+.btn-theme {
+    background-color: #d87028 !important;
+    color: white !important;
+    border: none;
+    transition: background-color 0.5s !important;
+
+    &:hover {
+        background-color: #ef6d0f !important;
+    }
+}
+
+.text-theme {
+    color: #d87028 !important;
+}
+
+h1 {
+    font-family: "AcuminPro" !important;
+    font-size: 3rem !important;
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.8rem !important;
+    }
+}
+
+h2 {
+    font-family: "AcuminPro" !important;
+}
+
+h3 {
+    font-family: "AcuminPro" !important;
+    font-size: 1.875rem !important;
+}
+
+@media (max-width: 576px) {
+    h3 {
+        font-size: 1.2rem !important;
+    }
+
+    p {
+        font-size: 0.8rem !important;
+    }
+}
+
+p {
+    font-family: "Soleil" !important;
+}
+
+h5 {
+    font-family: "fonts.com-AcuminPro-Bold" !important;
+}
+
+/* utility classes end */
+
+
+
+/* hero section start */
+
+.imara-landing-logo {
+    width: 30%;
+    position: absolute;
+    top: 50% !important;
+    left: 50%;
+    transform: translate(-70%, 0%);
+}
+
+.imara-landing-logo img {
+    width: 100% !important;
+    height: auto !important;
+    padding-top: 20px;
+}
+
+.makklo_jsd {
+    width: 40%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.hero-section-container .hero-text {
+    margin-top: 54px;
+}
+
+@media (max-width: 768px) {
+    .imara-landing-logo img {
+        width: 120px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .imara-landing-logo img {
+        width: 100px !important;
+    }
+}
+
+.hero-section-container .hero-text p {
+    font-size: 20px !important;
+}
+
+.scroll-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #d87028;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.5s;
+
+    &:hover {
+        background-color: #ef6d0f !important;
+    }
+}
+
+@media (max-width: 992px) {
+    header img {
+        height: 85vh !important;
+        object-fit: cover;
+    }
+
+    .hero-section-container h1 {
+        font-size: 38px !important;
+    }
+
+    .hero-section-container .hero-text p {
+        font-size: 16px !important;
+    }
+
+    .hero-section-container .scroll-button {
+        padding: 10px 14px !important;
+        font-size: 20px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    header img {
+        height: 85vh !important;
+        object-fit: cover;
+    }
+
+    .hero-section-container h1 {
+        font-size: 28px !important;
+    }
+
+    .hero-section-container .hero-text p {
+        font-size: 14px !important;
+    }
+
+    .hero-section-container .scroll-button {
+        padding: 8px 12px !important;
+        font-size: 18px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    header img {
+        height: 65vh !important;
+        object-fit: cover;
+    }
+
+    .hero-section-container h1 {
+        font-size: 20px !important;
+    }
+
+    .hero-section-container .hero-text h1,
+    .hero-section-container .hero-text p {
+        width: 320px !important;
+        padding-top: 20px !important;
+    }
+
+    .hero-section-container .hero-text p {
+        font-size: 14px !important;
+    }
+
+    .hero-section-container .scroll-button {
+        padding: 3px 8px !important;
+        font-size: 14px !important;
+    }
+}
+
+/* small mobile */
+@media (max-width: 415px) {
+    header img {
+        height: 50vh !important;
+        object-fit: cover;
+    }
+
+    .hero-section-container h1 {
+        font-size: 24px !important;
+    }
+
+    .hero-section-container .hero-text p {
+        font-size: 16px !important;
+    }
+
+    .hero-section-container .scroll-button {
+        padding-top: 4px !important;
+        font-size: 9px !important;
+    }
+}
+
+/* hero section end */
+
+
+
+/* national parks section start */
+
+.park-img-wrapper {
+    overflow: hidden;
+}
+
+.national-parks-section .card .card-body p {
+    font-size: 0.9rem !important;
+}
+
+.park-card-body-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-body-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top,
+            rgba(216, 112, 40, 0.95),
+            rgba(216, 112, 40, 0.90));
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 2;
+}
+
+.park-card.selected .card-body-overlay {
+    transform: translateY(0);
+}
+
+.park-card.selected .card-body {
+    background-color: rgba(216, 112, 40, 0.9);
+    transition: background-color 0.3s ease;
+}
+
+.park-card.selected .card-title {
+    color: #fff !important;
+}
+
+.overlay-text-content {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease 0.15s;
+    text-align: center;
+    color: white !important;
+}
+
+.park-card.selected .overlay-text-content {
+    opacity: 1;
+    transform: translateY(0);
+    color: white;
+}
+
+.park-img-wrapper:hover img {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.park-card {
+    transition: all 0.3s ease;
+}
+
+.park-card:hover {
+    cursor: pointer;
+    color: #d87028 !important;
+    transition: all 0.3s ease;
+}
+
+.park-card-body-wrapper .card-title {
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+.tick-background {
+    width: 70px;
+    height: 70px;
+    background-color: #f8f9faa8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 767.98px) {
+    section .col-6.col-lg-3.mb-4.d-flex {
+        padding-right: 5px;
+        padding-left: 5px;
+        margin-bottom: 10px !important;
+    }
+
+    /* hide description text */
+    .park-card .card-text {
+        display: none;
+    }
+
+    .park-card .card-body-overlay {
+        display: none;
+    }
+
+    .park-card .card-body {
+        padding: 0.75rem;
+    }
+
+    .park-card .card-title {
+        font-size: 0.95rem;
+        margin-bottom: 0 !important;
+    }
+
+    .park-card-body-wrapper .card-title {
+        font-size: 0.8rem;
+    }
+
+    .tick-background {
+        width: 50px;
+        height: 50px;
+    }
+
+    .check {
+        width: 30px !important;
+        height: 30px !important;
+    }
+}
+
+/* national parks section end */
+
+
+/* planning safari start */
+
+@media (max-width: 576px) {
+    .planning-safari-section .month-button {
+        font-size: 12.8px !important;
+    }
+}
+
+.alert-bg-theme {
+    background-color: #fcfcfc !important;
+}
+
+/* planning safari end */
+
+
+/* contact information start */
+.contact-information-section input,
+.contact-information-section select {
+    padding: 12px 12px !important;
+}
+
+.security-message {
+    color: #2a7f62;
+    font-size: 17px;
+    margin-top: 10px;
+    padding: 0 10px;
+    padding-top: 0.5rem;
+    border-left: 4px solid #2a7f62;
+    background-color: #f3fef7;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+
+    .contact-information-section .container label,
+    .contact-information-section .container button,
+    .contact-information-section .container input,
+    .contact-information-section .container select,
+    .contact-information-section .container textarea {
+        font-size: 14px !important;
+    }
+
+    .contact-information-section .container button {
+        padding: 16px !important;
+    }
+}
+
+@media (max-width: 575px) {
+
+    .contact-information-section .container label,
+    .contact-information-section .container button,
+    .contact-information-section .container input,
+    .contact-information-section .container select,
+    .contact-information-section .container textarea {
+        font-size: 12px !important;
+    }
+
+    .contact-information-section .container button {
+        padding: 14px !important;
+    }
+}
+
+.form-control:focus,
+.form-select:focus {
+    color: none !important;
+    background-color: none !important;
+    border-color: #d87028 !important;
+    outline: 0;
+    box-shadow: none !important;
+}
+
+/* contact information end */
+
+
+/* benefits section start */
+
+.benefit-card {
+    padding: 30px;
+    background-color: #fafafa;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    height: 100%;
+    gap: 20px;
+}
+
+.benefit-card:hover {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transform: translateY(-5px);
+}
+
+.benefit-icon-wrapper {
+    flex-shrink: 0;
+}
+
+.benefit-icon {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #f5e6d3 0%, #ede0cf 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.benefit-icon img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.benefit-content {
+    flex: 1;
+}
+
+.benefit-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2c2c2c;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .benefit-title {
+        margin-top: -15px !important;
+    }
+}
+
+.benefit-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #d87028 0%, transparent 100%);
+}
+
+.benefit-description {
+    font-size: 0.95rem;
+    color: #666666;
+    line-height: 1.7;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .benefit-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px;
+    }
+
+    .benefit-title::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .benefit-icon {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 20px;
+    }
+
+    .benefit-icon img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .benefits-section h1 {
+        font-size: 1.8rem !important;
+    }
+}
+
+@media (max-width: 992px) and (min-width: 769px) {
+    .benefit-description {
+        font-size: 0.9rem;
+    }
+
+    .benefit-title {
+        font-size: 1.3rem;
+    }
+}
+
+/* benefits section end */
+
+
+
+/* testimonial section start */
+
+.testimonial-swiper {
+    padding: 40px 20px 80px;
+}
+
+.testimonial-card {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.star-rating {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.star-rating .star {
+    color: #d87028;
+    font-size: 24px;
+}
+
+.testimonial-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1.4;
+    margin-bottom: 30px;
+}
+
+.testimonial-review {
+    font-size: 1.15rem;
+    color: #888888;
+    line-height: 1.8;
+    font-style: italic;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.author-info {
+    display: inline-flex;
+    align-items: center;
+}
+
+.author-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid #e0e0e0;
+}
+
+.author-details {
+    text-align: left !important;
+}
+
+.author-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.author-date {
+    font-size: 1rem;
+    color: #d87028;
+    margin: 0;
+}
+
+.testimonial-swiper .swiper-pagination {
+    bottom: 30px;
+}
+
+.testimonial-swiper .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: #d87028;
+    opacity: 0.3;
+    transition: all 0.3s ease;
+}
+
+.testimonial-swiper .swiper-pagination-bullet-active {
+    opacity: 1;
+    width: 30px;
+    border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+    .testimonial-title {
+        font-size: 1.5rem;
+    }
+
+    .testimonial-review {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+
+    .author-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .author-name {
+        font-size: 1.1rem;
+    }
+
+    .author-date {
+        font-size: 0.9rem;
+    }
+
+    .star-rating .star {
+        font-size: 20px;
+    }
+
+    .testimonial-swiper {
+        padding: 20px 10px 60px;
+    }
+}
+
+@media (max-width: 576px) {
+    .testimonial-section {
+        padding: 50px 0;
+    }
+
+    .testimonial-title {
+        font-size: 1.3rem;
+    }
+
+    .testimonial-review {
+        font-size: 0.95rem;
+    }
+}
+
+/* testimonial section end */
+
+
+/* experiences section start */
+
+.experience-img-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (min-width: 992px) {
+    .experience-img-wrapper {
+        height: 220px;
+        overflow: hidden;
+    }
+
+    .experience-img-wrapper img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.experience-img-wrapper.fixed-height {
+    height: 260px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.experience-img-wrapper.fixed-height img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    width: 1rem !important;
+    color: #d87028 !important;
+}
+
+/* experiences section end */

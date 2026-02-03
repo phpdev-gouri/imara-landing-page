@@ -12,10 +12,21 @@ const ContactInformation = forwardRef(
             message: "",
         });
 
+        // const handleChange = (e) => {
+        //     const { name, value } = e.target;
+        //     setContact((prev) => ({ ...prev, [name]: value }));
+        // };
         const handleChange = (e) => {
-            const { name, value } = e.target;
-            setContact((prev) => ({ ...prev, [name]: value }));
-        };
+    const { name, value } = e.target;
+
+    // allow only digits for phone
+    if (name === "phone" && !/^\d*$/.test(value)) return;
+
+    setContact((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
 
         const handleSubmit = (e) => {
             e.preventDefault();
@@ -292,15 +303,17 @@ const ContactInformation = forwardRef(
                                             <option value="263">Zimbabwe (+263)</option>
                                         </select>
 
-                                        <input
-                                            type="tel"
-                                            name="phone"
-                                            value={contact.phone}
-                                            onChange={handleChange}
-                                            className="form-control"
-                                            id="exampleInputPhone"
-                                            placeholder="Phone"
-                                        />
+                                         <input
+              type="tel"
+              name="phone"
+              value={contact.phone}
+              onChange={handleChange}
+              placeholder="Phone Number"
+              required
+              pattern="^[0-9]{7,15}$"
+              title="Please enter a valid phone number (7–15 digits)"
+              className="form-control"
+            />
                                     </div>
                                 </div>
 
